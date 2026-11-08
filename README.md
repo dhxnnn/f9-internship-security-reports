@@ -30,6 +30,7 @@ The Master Report is the full day-by-day record. It contains 44 documented test 
 | F-07 | Session not invalidated on logout | API2 Broken Authentication | Medium |
 | F-08 | Open CORS policy and missing CSP | API8 Security Misconfiguration | Medium |
 | F-09 | Unsafe consumption of upstream API responses | API10 Unsafe Consumption of APIs | Medium |
+| F-10 | No rate limiting on login or OTP generation (15 and 20 repeated requests accepted, no lockout or CAPTCHA) | API4 Unrestricted Resource Consumption | High |
 
 **Common theme:** the application checks that you are logged in, but does not consistently check that you are allowed to access the specific object or function you asked for. Fixing authorisation at framework level would close most of the Critical and High findings at once.
 
